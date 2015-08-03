@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   root "songs#index"
   get 'login', to: 'sessions#new'
   get 'logout', to: 'sessions#destroy'
+  get 'my-songs', to: 'saved_songs#index'
 end
