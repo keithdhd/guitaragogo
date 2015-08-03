@@ -1,0 +1,8 @@
+<li class="user">
+  <ul>
+    <li><%= link_to user.email, photos_path(user) %></li>
+    <li><%= link_to 'Show', user %></li>
+    <li><%= link_to 'Edit', edit_user_path(user) %></li>
+    <li><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  </ul>
+</li>
