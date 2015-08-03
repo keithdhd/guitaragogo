@@ -17,10 +17,15 @@
      <nav>
        <ul>
          <li><a href="/">GuitaraGoGo</a></li>
-         <li><a href="/users/new">Register</a></li>
-         <li><a href="/login">Login</a></li>
-         <li><a href="/logout">Logout</a></li>
-         <li><a href="/songs">Songs</a></li>
+         <% if current_user %>
+          <li><%= current_user.first_name %> <%= current_user.last_name %></li>
+          <li><a href="/logout">Logout</a></li>
+          <li><a href="/songs">Songs</a></li>
+         <% else %>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/users/new">Register</a></li>
+         <% end %>
+      
        </ul>
      </nav> 
   </header>

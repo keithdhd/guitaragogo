@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources:sessions
   resources:users
 
-  root "users#index"
+  root "songs#index"
   get 'login', to: 'sessions#new'
   get 'logout', to: 'sessions#destroy'
 end

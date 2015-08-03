@@ -1,5 +1,11 @@
 <h1>Listing Users</h1>
 
+<% flash.each do |name, message| %>
+ <div class="flash-message flash-message-<%= name %>">
+  <%= message %>
+ </div>
+<% end %>
+
 <ul>
   <%= render @users %>
 </ul>
