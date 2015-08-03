@@ -1,5 +1,6 @@
 class LessonsController < ApplicationController
   def index
+    @lessons = Lesson.where("song_id=?", params[:song_id])
   end
 
   def new
