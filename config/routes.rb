@@ -1,23 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'lessons/index'
-
-  get 'lessons/new'
-
-  get 'lessons/create'
-
-  get 'lessons/show'
-
-  get 'lessons/update'
-
-  get 'lessons/destroy'
-
-  get 'songs/index'
-
-  get 'songs/new'
-
-  get 'songs/create'
-
   resources:lessons
   resources:songs
   resources:sessions
