@@ -1,0 +1,15 @@
+<%= form_for(@lesson) do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :video_url %>
+    <%= f.text_field :video_url %>
+  </div>
+  <div class="field">
+    <%= f.label :song_id %><br>
+    <%= f.collection_select(:song_id, Song.all, :id, :title) %>
+  </div>
+  <div class="actions"><%= f.submit %></div>
+<% end %>
