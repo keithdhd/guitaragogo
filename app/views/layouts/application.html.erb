@@ -25,6 +25,7 @@
           <li><a href="/lessons/new">Add Lesson</a></li>
           <li><a href="/genres">Genres</a></li>
           <li>
+            <% @q = Song.ransack(params[:q]) %> 
             <%= search_form_for @q do |f| %>
             <%= f.text_field :title_cont, :placeholder => "Search Songs", :class => "homepage-searchbar" %>
             <%= f.submit :class => "button tiny" %>
