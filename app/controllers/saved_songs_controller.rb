@@ -1,5 +1,6 @@
 class SavedSongsController < ApplicationController
   def index
+    @mysongs = true
     @saved_songs = current_user.saved_songs
   end
 

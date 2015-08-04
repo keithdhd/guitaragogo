@@ -2,7 +2,9 @@
   <ul>
     <li>
       <%= link_to song.title, lessons_path(song_id: song.id) %>
-      <%= link_to('Add to my songs', saved_songs_path(song_id: song.id), method: :post) %> 
+      <% if !@mysongs %>
+        <%= link_to('Add to my songs', saved_songs_path(song_id: song.id), method: :post) %> 
+      <% end %>
     </li>
   </ul>
 </li>
