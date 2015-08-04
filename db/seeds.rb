@@ -12,6 +12,7 @@ song1 = Song.create!(title: 'All Around My Hat')
 song2 = Song.create!(title: 'Purple Haze')
 song3 = Song.create!(title: 'Scrapheap Rag')
 song4 = Song.create!(title: 'Country Road')
+song5 = Song.create!(title: 'Will You Still Love Me Tomorrow')
 
 genre1 = song2.genres.create(name:"Blues")
 genre1.songs << song3
@@ -19,6 +20,8 @@ genre1.songs << song4
 
 genre2 = song4.genres.create(name:"Country")
 genre2.songs << song3
+
+genre3 = song5.genres.create(name:"Doo Wop")
 
 users = User.create([{first_name:'Frank', last_name:'Zappa', email:'frank@zappa.com', password:'letmein'},{first_name:'Keith', last_name:'Douglas', email:'kingofnap@gmail.com', password:'letmein'},{first_name:'Hippy', last_name:'Chick', email:'hippy@chick.com', password:'letmein'},{first_name:'James', last_name:'Taylor', email:'james@taylor.com', password:'letmein'}])
 
@@ -30,3 +33,4 @@ Lesson.create!(instrument:guitar, song:song2, teacher:users[1], title:'My super 
 Lesson.create!(instrument:guitar, song:song2, teacher:users[0], title:'My other super lesson')
 Lesson.create!(instrument:guitar, song:song1, teacher:users[2], title:'My ok lesson')
 Lesson.create!(instrument:guitar, song:song4, teacher:users[3], title:'Country Road', video_url:'mUOxijUToBI')
+Lesson.create!(instrument:guitar, song:song5, teacher:users[1], title:'Will You Still Love Me...', video_url:'cbxxkwBQk_o')
