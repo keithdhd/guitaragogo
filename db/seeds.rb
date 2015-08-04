@@ -18,7 +18,7 @@ genre1.songs << song3
 genre1.songs << song4
 
 genre2 = song4.genres.create(name:"Country")
-genre2.songs << song4
+genre2.songs << song3
 
 users = User.create([{first_name:'Frank', last_name:'Zappa', email:'frank@zappa.com', password:'letmein'},{first_name:'Keith', last_name:'Douglas', email:'kingofnap@gmail.com', password:'letmein'},{first_name:'Hippy', last_name:'Chick', email:'hippy@chick.com', password:'letmein'},{first_name:'James', last_name:'Taylor', email:'james@taylor.com', password:'letmein'}])
 
