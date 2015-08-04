@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'genres/index'
+
   resources:lessons
   resources:songs
   resources:sessions
   resources:users
   resources:saved_songs
+  resources:genres
 
   root "songs#index"
   get 'login', to: 'sessions#new'
