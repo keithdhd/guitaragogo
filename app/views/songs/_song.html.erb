@@ -2,16 +2,7 @@
   <ul>
     <li>
       <%= link_to song.title, lessons_path(song_id: song.id) %>
-        <% if !@mysongs %>
-          <%= form_tag('/saved_songs') do %>
-          <%= hidden_field_tag 'saved_song_song_id', song.id %>
-          <%= hidden_field_tag 'saved_song_student_id', current_user.id %>
-          <%= submit_tag 'Add to My Songs' %>
-        <% end %>
-      <% else %>
-        <%= song.status %>
-      <% end %>
-
+      <%= link_to('Add to my songs', saved_songs_path(song_id: song.id), method: :post) %> 
     </li>
   </ul>
 </li>
