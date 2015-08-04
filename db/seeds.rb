@@ -22,8 +22,9 @@ genre2.songs << song4
 
 users = User.create([{first_name:'Frank', last_name:'Zappa', email:'frank@zappa.com', password:'letmein'},{first_name:'Keith', last_name:'Douglas', email:'kingofnap@gmail.com', password:'letmein'},{first_name:'Hippy', last_name:'Chick', email:'hippy@chick.com', password:'letmein'},{first_name:'James', last_name:'Taylor', email:'james@taylor.com', password:'letmein'}])
 
-SavedSong.create!(student_id:1, song:song1)
-SavedSong.create!(student_id:1, song:song2) 
+SavedSong.create!(student_id:1, song:song1, status:"To Do")
+SavedSong.create!(student_id:1, song:song2, status:"Done") 
+SavedSong.create!(student_id:3, song:song3, status:"Doing") 
 
 Lesson.create!(instrument:guitar, song:song2, teacher:users[1], title:'My super lesson')
 Lesson.create!(instrument:guitar, song:song2, teacher:users[0], title:'My other super lesson')

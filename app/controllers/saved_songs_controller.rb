@@ -1,6 +1,6 @@
 class SavedSongsController < ApplicationController
   def index
-    @songs = current_user.songs
+    @saved_songs = current_user.saved_songs
   end
 
   def new

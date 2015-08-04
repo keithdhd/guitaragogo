@@ -1,4 +1,5 @@
-<li class="song">
+<% song = saved_song.song %>
+<li class="saved_song">
   <ul>
     <li>
       <%= link_to song.title, lessons_path(song_id: song.id) %>
@@ -9,7 +10,7 @@
           <%= submit_tag 'Add to My Songs' %>
         <% end %>
       <% else %>
-        <%= song.status %>
+        <%= saved_song.status %>
       <% end %>
 
     </li>
