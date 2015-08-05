@@ -25,11 +25,8 @@
         <section class="top-bar-section">
          <!-- Right Nav Section -->
           <ul class="right">
-              <li>
-          
-              </li>
              <% if current_user %>
-              <li><a href="/my-songs"><%= current_user.first_name %> <%= current_user.last_name %></a></li>
+              <li><a href="/my-songs">Hi <%= current_user.first_name %> <%= current_user.last_name %>!</a></li>
               <li><a href="/logout">Logout</a></li>
               <li><a href="/my-songs">My Songs</a></li>
               <li><a href="/songs">All Songs</a></li>

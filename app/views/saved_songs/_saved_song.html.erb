@@ -1,10 +1,17 @@
 <% song = saved_song.song %>
-<li class="saved_song">
-  <ul>
-    <li>
+<div class="row">
+  <div class="small-12 small-centered columns">
+    <div class="small-12 medium-3 large-3 columns">
+      Something here     
+    </div>
+    <div class="small-12 medium-3 large-3 columns">
       <%= link_to song.title, lessons_path(song_id: song.id) %>
-
+    </div>
+    <div class="small-12 medium-3 large-3 columns">
+      <%= link_to "View Lessons", lessons_path(song_id: song.id) %>
+    </div>
+    <div class="ssmall-12 medium-3 large-3 columns">
       <%= saved_song.status %>
-    </li>
-  </ul>
-</li>
+    </div>
+  </div>
+</div>
