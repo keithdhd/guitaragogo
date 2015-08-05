@@ -4,15 +4,23 @@
  </div>
 <% end %>
 
-<h1>Login</h1>
-<%= form_tag sessions_path do %>
-  <div class="row">
-    <%= label_tag :email %>
-    <%= text_field_tag :email, params[:email] %>
+<div class="row">
+  <div class="user-form">
+    <div class="small-4 small-centered columns">
+      <h1>Login</h1>
+    </div>
+    <%= form_tag sessions_path do %>
+      <div class="small-4 small-centered columns">
+        <%= label_tag :email %>
+        <%= text_field_tag :email, params[:email] %>
+      </div>
+      <div class="small-4 small-centered columns">
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+      </div>
+      <div class="small-4 small-centered columns">
+        <%= submit_tag "Log in", class: 'button' %>
+      </div>
+    <% end %>
   </div>
-  <div class="row">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <div class="row"><%= submit_tag "Log in", class: 'button' %></div>
-<% end %>
+</div>
