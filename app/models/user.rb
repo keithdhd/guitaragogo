@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  mount_uploader :avatar, AvatarUploader
+  
   has_secure_password
   has_many :saved_songs, class_name:'SavedSong', foreign_key: :student_id
   has_many :lessons, class_name:'Lesson', foreign_key: :teacher_id
