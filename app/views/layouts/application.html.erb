@@ -12,27 +12,35 @@
 
   <body>
   <header>
-     <nav class="">
-       <ul>
-         <li><a href="/">GuitaraGoGo</a></li>
-         <% if current_user %>
-          <li><%= current_user.first_name %> <%= current_user.last_name %></li>
-          <li><a href="/logout">Logout</a></li>
-          <li><a href="/my-songs">My Songs</a></li>
-          <li><a href="/songs">All Songs</a></li>
-          <li><a href="/lessons/new">Add Lesson</a></li>
-          <li><a href="/genres">Genres</a></li>
-          <li>
-            <% @q = Song.ransack(params[:q]) %> 
-            <%= search_form_for @q do |f| %>
-            <%= f.text_field :title_cont, :placeholder => "Search Songs", :class => "homepage-searchbar" %>
-            <%= f.submit :class => "button tiny" %>
-            <% end %>
-          </li>
-         <% else %>
-          <li><a href="/login">Login</a></li>
-          <li><a href="/users/new">Register</a></li>
-         <% end %>
+     <nav class="top-bar foundation-bar" data-topbar>
+       <ul class="title-area">
+         <li class="name">
+            <span data-tooltip class="has-tip" title="Guitaragogo logo is repsonsive!">
+              <h1 class="show-for-small-only"><a href="/">Guitaragogo</a></h1>
+            </span>
+            <h1 class="show-for-medium-only"><a href="/">Guitaragogo</a></h1>
+            <h1 class="show-for-large-only"><a href="/">Guitaragogo</a></h1>
+         </li>
+        </ul>
+        <section class="top-bar-section">
+         <!-- Right Nav Section -->
+          <ul class="right">
+              <li>
+          
+              </li>
+             <% if current_user %>
+              <li><a href="/my-songs"><%= current_user.first_name %> <%= current_user.last_name %></a></li>
+              <li><a href="/logout">Logout</a></li>
+              <li><a href="/my-songs">My Songs</a></li>
+              <li><a href="/songs">All Songs</a></li>
+              <li><a href="/lessons/new">Add Lesson</a></li>
+              <li><a href="/genres">Genres</a></li>
+             <% else %>
+              <li><a href="/login">Login</a></li>
+              <li><a href="/users/new">Register</a></li>
+             <% end %>
+           </ul>
+         </section>
       
        </ul>
      </nav> 

@@ -1,1 +1,15 @@
-Home YO init.
+<% @q = Song.ransack(params[:q]) %> 
+<%= search_form_for @q do |f| %>
+<div class="row">
+  <div class="large-12 columns">
+    <div class="row collapse">
+      <div class="small-10 columns">
+        <%= f.text_field :title_cont, :placeholder => "Search Songs" %>
+      </div>
+      <div class="small-2 columns">
+        <%= f.submit :class => "button postfix", :value => "GoGo!" %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
