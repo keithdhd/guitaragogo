@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'acts_as_votable', '~> 0.10.0'
 gem 'ransack'
 gem 'foundation-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
