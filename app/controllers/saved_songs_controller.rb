@@ -1,4 +1,6 @@
 class SavedSongsController < ApplicationController
+  before_action :authenticate, only: [:create, :index]
+
   def index
     @mysongs = true
     @saved_songs = current_user.saved_songs

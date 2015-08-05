@@ -1,4 +1,6 @@
 class LessonsController < ApplicationController
+  before_action :authenticate, only: [:create, :edit, :new, :index]
+  
   def index
     @lessons = Lesson.where("song_id=?", params[:song_id])
   end
@@ -14,7 +16,7 @@ class LessonsController < ApplicationController
 
     respond_to do |format|
       if @lesson.save
-        format.html { redirect_to login_path, notice: 'Sweet! Good work. You created a new lesson' }
+        format.html { redirect_to lessons_path, notice: 'Sweet! Good work. You created a new lesson' }
         format.json { render :show, status: :created, location: lessons_path }
       else
         format.html { render :new }
