@@ -1,4 +1,27 @@
 <% @mysongs = true %>
+<div class="row">
+  <div class="small-4 small-centered columns">
+    <h1><%= current_user.first_name %>'s Songs</h1>
+  </div>
+</div>
+
+<div class="row table-header">
+  <div class="small-12 small-centered columns">
+    <div class="small-3 columns">
+      Difficulty    
+    </div>
+    <div class="small-3 columns">
+     Title
+    </div>
+    <div class="small-3 columns">
+      Available Lessons
+    </div>
+    <div class="small-3 columns">
+      To Do / Done
+    </div>
+  </div>
+</div>
+  
 <div class="saved-song">
   <%= render @saved_songs %>
 </div>

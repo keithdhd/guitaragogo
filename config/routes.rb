@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources:saved_songs
   resources:genres
 
-  root "static_pages#home"
+  root "static_pages#splash"
   get 'login', to: 'sessions#new'
   get 'logout', to: 'sessions#destroy'
   get 'my-songs', to: 'saved_songs#index'

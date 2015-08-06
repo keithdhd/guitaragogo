@@ -8,11 +8,11 @@
 
 guitar = Instrument.create!(name:"Guitar")
 
-song1 = Song.create!(title: 'All Around My Hat')
-song2 = Song.create!(title: 'Purple Haze')
-song3 = Song.create!(title: 'Scrapheap Rag')
-song4 = Song.create!(title: 'Country Road')
-song5 = Song.create!(title: 'Will You Still Love Me Tomorrow')
+song1 = Song.create!(title: 'All Around My Hat', difficulty:"Beginner")
+song2 = Song.create!(title: 'Purple Haze', difficulty:"Intermediate")
+song3 = Song.create!(title: 'Scrapheap Rag', difficulty:"Expert")
+song4 = Song.create!(title: 'Country Road', difficulty:"Intermediate")
+song5 = Song.create!(title: 'Will You Still Love...', difficulty:"Expert")
 
 genre1 = song2.genres.create(name:"Blues")
 genre1.songs << song3

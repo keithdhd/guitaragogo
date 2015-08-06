@@ -1,15 +1,25 @@
 <%= form_for(@lesson) do |f| %>
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+  <div class="row">
+    <div class="small-4 small-centered columns">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :video_url %>
-    <%= f.text_field :video_url %>
+  <div class="row">
+    <div class="small-4 small-centered columns">
+      <%= f.label :video_url %>
+      <%= f.text_field :video_url %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :song_id %><br>
+  <div class="row">
+    <div class="small-4 small-centered columns">
+    <%= f.label :song_id %>
     <%= f.collection_select(:song_id, Song.all, :id, :title) %>
+    </div>
   </div>
-  <div class="actions"><%= f.submit %></div>
+  <div class="row">
+    <div class="small-4 small-centered columns">
+      <%= f.submit "Go GO!", class:"button" %>
+    </div>
+  </div>
 <% end %>

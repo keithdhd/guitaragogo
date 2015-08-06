@@ -1,10 +1,16 @@
-<li class="song">
-  <ul>
-    <li>
+<div class="row">
+  <div class="small-12 small-centered columns">
+    <div class="small-3 columns">
+      <%= song.difficulty %>  
+    </div>
+    <div class="small-3 columns">
       <%= link_to song.title, lessons_path(song_id: song.id) %>
-      <% if !@mysongs %>
-        <%= link_to('Add to my songs', saved_songs_path(song_id: song.id), method: :post) %> 
-      <% end %>
-    </li>
-  </ul>
-</li>
+    </div>
+    <div class="small-3 columns">
+      <%= link_to "View Lessons", lessons_path(song_id: song.id) %>
+    </div>
+    <div class="small-3 columns">
+      <%= link_to('Add to my songs', saved_songs_path(song_id: song.id), method: :post, class:"button") %>
+    </div>
+  </div>
+</div>

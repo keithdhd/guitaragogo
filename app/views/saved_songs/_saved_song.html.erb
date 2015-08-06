@@ -1,17 +1,23 @@
 <% song = saved_song.song %>
 <div class="row">
   <div class="small-12 small-centered columns">
-    <div class="small-12 medium-3 large-3 columns">
-      Something here     
+    <div class="small-3 columns">
+      <%= song.difficulty %>  
     </div>
-    <div class="small-12 medium-3 large-3 columns">
+    <div class="small-3 columns">
       <%= link_to song.title, lessons_path(song_id: song.id) %>
     </div>
-    <div class="small-12 medium-3 large-3 columns">
+    <div class="small-3 columns">
       <%= link_to "View Lessons", lessons_path(song_id: song.id) %>
     </div>
-    <div class="ssmall-12 medium-3 large-3 columns">
-      <%= saved_song.status %>
+    <div class="small-3 columns">
+      <div class="switch round">
+        <input id="<%= saved_song.id %>" type="checkbox">
+        <label for="<%= saved_song.id %>">
+          <span class="switch-on">Done</span>
+          <span class="switch-off">To Do</span>
+        </label>
+      </div>
     </div>
   </div>
 </div>

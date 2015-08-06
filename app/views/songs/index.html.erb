@@ -1,5 +1,40 @@
-<h1>Songs</h1>
+<div class="row">
+  <div class="small-6 small-centered columns">
+    <% @q = Song.ransack(params[:q]) %> 
+    <%= search_form_for @q do |f| %>
+    <div class="row">
+      <div class="small-12 columns">
+        <div class="row collapse">
+          <div class="small-8 columns">
+            <%= f.text_field :title_cont, :placeholder => "Search Songs" %>
+          </div>
+          <div class="small-4 columns">
+            <%= f.submit :class => "button postfix", :value => "GoGo!" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
 
-<ul>
+<div class="row table-header">
+  <div class="small-12 small-centered columns">
+    <div class="small-3 columns">
+      Difficulty    
+    </div>
+    <div class="small-3 columns">
+     Title
+    </div>
+    <div class="small-3 columns">
+      Available Lessons
+    </div>
+    <div class="small-3 columns">
+      Add
+    </div>
+  </div>
+</div>
+  
+<div class="song">
   <%= render @songs %>
-</ul>
+</div>

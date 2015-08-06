@@ -1,9 +1,16 @@
-<li class="lesson">
-  <ul>
-    <li>
-      <img src="http://img.youtube.com/vi/<%= lesson.video_url %>/1.jpg">
-      <%= link_to lesson.title, lesson_path(id:lesson.id) %>
-      By <%= lesson.teacher.first_name %> <%= lesson.teacher.last_name %>
-    </li>
-  </ul>
+<li>
+  <div class="profile-card">
+    <img src="http://img.youtube.com/vi/<%= lesson.video_url %>/2.jpg">
+    <div class="profile-info">
+      <h4 class="subheader">
+        <%= link_to lesson.title, lesson_path(id:lesson.id) %>
+      </h4>
+      <p>By <%= lesson.teacher.first_name %> <%= lesson.teacher.last_name %></p>
+      <p><%= link_to "Watch Lesson", lesson_path(id:lesson.id) %></p>
+      <ul class="inline-list">
+        <li><a href="https://www.facebook.com/ZURB"><i class="fi-social-facebook"></i></a></li>
+        <li><a href="https://twitter.com/zurbink"><i class="fi-social-twitter"></i></a></li>
+        <li><a href="https://github.com/zurb/ink"><i class="fi-social-github"></i></a></li>
+    </div>
+  </div>
 </li>
