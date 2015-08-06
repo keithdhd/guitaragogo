@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%= favicon_link_tag
     <title>Guitaragogo</title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400">
     <%= stylesheet_link_tag    "application" %>
@@ -20,7 +21,9 @@
               <h1 class="show-for-small-only"><a href="/">Guitaragogo</a></h1>
             </span>
             <h1 class="show-for-medium-only"><a href="/">Guitaragogo</a></h1>
-            <h1 class="show-for-large-only"><a href="/">Guitaragogo</a></h1>
+            <h1 class="show-for-large-only">
+              <a href="/"><%= image_tag "logo.png", class:"logo" %></a>
+            </h1>
          </li>
         </ul>
         <section class="top-bar-section">
@@ -34,8 +37,8 @@
               <li><a href="/lessons/new">Add Lesson</a></li>
               <li><a href="/genres">Genres</a></li>
              <% else %>
-              <li><a href="/login" class="button tiny">Login</a></li>
-              <li><a href="/users/new" class="button tiny">Register</a></li>
+              <li><a href="/login">Login</a></li>
+              <li><a href="/users/new">Register</a></li>
              <% end %>
            </ul>
          </section>
