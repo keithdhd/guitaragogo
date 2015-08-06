@@ -12,7 +12,9 @@
   padding-top: 150px;
 }
 
-input[type=text]{
+input[type=text],
+input[type=password],
+input[type=select]{
   height: 50px;
   font-size: 32px;
   color: grey;

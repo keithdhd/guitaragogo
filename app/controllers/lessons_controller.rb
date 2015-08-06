@@ -17,7 +17,7 @@ class LessonsController < ApplicationController
 
     respond_to do |format|
       if @lesson.save
-        format.html { redirect_to lessons_path, notice: 'Sweet! Good work. You created a new lesson' }
+        format.html { redirect_to lessons_path(song_id:@lesson.song.id), notice: 'Sweet! Good work. You created a new lesson' }
         format.json { render :show, status: :created, location: lessons_path }
       else
         format.html { render :new }

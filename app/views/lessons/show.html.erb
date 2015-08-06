@@ -1,23 +1,25 @@
-<div class="row">
-  <div class="small-4 columns">
-    <h2 class="sub-header">
+<section class="show-lesson">
+  <div class="row">
+    <div class="small-4 columns">
+      <h2 class="sub-header">
        <%= @lesson.title %> 
-    </h2>
-    <h4>
+     </h2>
+     <h4>
        by
-      <%= @lesson.teacher.first_name %>
-      <%= @lesson.teacher.last_name %>
-   </h4>
-   <div class="profile-card">
-    <p>
-      <%= @lesson.teacher.first_name %> will teach you "<%= @lesson.title %>". 
-    </p>
-    <p>
-      <%= @lesson.teacher.first_name %> will provide an overview of the song, and talk about the gear and different tones. The acoustic boom-chick part will be next, followed by the electric boom-chick part.
-    </p>
-   </div>
+       <%= @lesson.teacher.first_name %>
+       <%= @lesson.teacher.last_name %>
+     </h4>
+     <div class="profile-card">
+      <p>
+        <%= @lesson.teacher.first_name %> will teach you "<%= @lesson.title %>". 
+      </p>
+      <p>
+        <%= @lesson.teacher.first_name %> will provide an overview of the song, and talk about the gear and different tones. The acoustic boom-chick part will be next, followed by the electric boom-chick part.
+      </p>
+    </div>
   </div>
   <div class="small-8 columns">
     <iframe width="640" height="480" src="https://www.youtube.com/embed/<%= @lesson.video_url %>" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
+</section>

@@ -1,10 +1,14 @@
 <div class="row">
   <div class="small-12 small-centered columns">
     <div class="small-3 columns">
-      <%= song.difficulty %>  
+      <% if song.difficulty %>
+        <%= song.difficulty %>  
+      <% else %>
+        Beginner  
+      <% end %>
     </div>
     <div class="small-3 columns">
-      <%= link_to song.title, lessons_path(song_id: song.id) %>
+      <%= link_to truncate(song.title,:length => 24), lessons_path(song_id: song.id) %>
     </div>
     <div class="small-3 columns">
       <%= link_to "View Lessons", lessons_path(song_id: song.id) %>
