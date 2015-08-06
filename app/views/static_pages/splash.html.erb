@@ -1,15 +1,37 @@
 <div class="splash">
   <!-- Vintage Guitar Shop In Rome by Yair Taragano -->
 
-  <div class="row">
-    <div class="small-12 small-centered columns">
-      <h2 class="splash-headline">Learn to play the songs you love.</h2>
+  <section class="splash-container">
+    <div class="row">
+      <div class="small-12 small-centered columns">
+        <h2 class="splash-headline">Learn to play the songs you love.</h2>
+      </div>
     </div>
-  </div>
 
-  <div class="row">
-    <span><%= link_to "Login", login_path,  class:"button radius" %></span>
-    <span><%= link_to "Register", new_user_path,  class:"button radius" %></span>
-  </div>
+    <div class="row">
+      <div class="small-6 small-centered columns">
+        <% @q = Song.ransack(params[:q]) %> 
+        <%= search_form_for @q do |f| %>
+        <div class="row">
+          <div class="small-12 columns">
+            <div class="row collapse">
+              <div class="small-8 columns">
+                <%= f.text_field :title_cont, :placeholder => "Search Songs" %>
+              </div>
+              <div class="small-4 columns">
+                <%= f.submit :class => "button postfix", :value => "GoGo!" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="row">
+      <%= link_to "Login", login_path,  class:"button radius" %>
+      <%= link_to "Register", new_user_path,  class:"button radius" %>
+    </div>
+  </section>
 
 </div>
