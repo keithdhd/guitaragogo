@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new'
   get 'logout', to: 'sessions#destroy'
   get 'my-songs', to: 'saved_songs#index'
+  get 'my-lessons', to:'lessons#mylessons'
 end

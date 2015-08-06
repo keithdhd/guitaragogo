@@ -1,6 +1,10 @@
 class LessonsController < ApplicationController
-  before_action :authenticate, only: [:create, :edit, :new, :index]
+  before_action :authenticate, only: [:create, :edit, :new, :index, :mylessons]
   
+  def mylessons
+    @lessons = Lesson.all
+  end
+
   def index
     @lessons = Lesson.where("song_id=?", params[:song_id])
     @song = Song.find(params[:song_id])
