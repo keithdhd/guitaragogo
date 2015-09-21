@@ -1,4 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+  # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 # Examples:
@@ -15,7 +15,6 @@ song4 = Song.create!(title: 'Country Road', difficulty:"Intermediate")
 song5 = Song.create!(title: 'Will You Still Love...', difficulty:"Expert")
 
 song1 = Song.create!(title: 'Suspicious Minds')
-song1 = Song.create!(title: 'Highway To Hell', difficulty: "Intermediate")
 song1 = Song.create!(title: 'Sharp Dressed Man')
 song1 = Song.create!(title: 'More Than A Feeling (For Beginners)')
 song1 = Song.create!(title: 'Alice''s Restaurant')
@@ -86,7 +85,6 @@ song1 = Song.create!(title: 'After Midnight')
 song1 = Song.create!(title: 'About A Girl')
 song1 = Song.create!(title: 'Susie Q')
 song1 = Song.create!(title: 'Gimme Three Steps')
-song1 = Song.create!(title: 'Five Hundred Miles', difficulty: "Easy")
 song1 = Song.create!(title: 'Before You Accuse Me')
 song1 = Song.create!(title: 'Psychotic Reaction')
 song1 = Song.create!(title: 'Between The Lines')
@@ -275,7 +273,6 @@ song1 = Song.create!(title: 'Wild Thing')
 song1 = Song.create!(title: '(I''m Not Your) Steppin'' Stone')
 song1 = Song.create!(title: 'Pull Me Under')
 song1 = Song.create!(title: 'My Heroes Have Always Been Cowboys')
-song1 = Song.create!(title: 'Achy Breaky Heart', difficulty: "Super Easy")
 song1 = Song.create!(title: 'Electric Eye')
 song1 = Song.create!(title: 'Funk 49')
 song1 = Song.create!(title: 'Low')
@@ -703,6 +700,10 @@ song3 = Song.create!(title: 'Sequestered In Memphis')
 song2 = Song.create!(title: 'Will You Still Love Me...')
 song1 = Song.create!(title: 'Still The One I Run To')
 
+song10 = Song.create!(title: 'Achy Breaky Heart', difficulty: "Super Easy")
+song11 = Song.create!(title: 'Highway To Hell', difficulty: "Intermediate")
+song12 = Song.create!(title: 'Five Hundred Miles', difficulty: "Easy")
+
 genre1 = song2.genres.create(name:"Country")
 genre1.songs << song3
 genre1.songs << song4
@@ -720,3 +721,21 @@ Lesson.create!(instrument:guitar, song:song1, teacher:users[1], title:'Still The
 Lesson.create!(instrument:guitar, song:song1, teacher:users[0], title:'Still The One', video_url:'YEkz4kSqxYc')
 Lesson.create!(instrument:guitar, song:song1, teacher:users[1], title:'Still The One', video_url:'Cu3qhbT88NQ')
 Lesson.create!(instrument:guitar, song:song2, teacher:users[0], title:'Will You Still Love Me...', video_url:'cbxxkwBQk_o')
+
+Lesson.create!(instrument:guitar, song:song10, teacher:users[1], title:'Achy Breaky Pt1', video_url:'LJDjlu3UnSQ')
+Lesson.create!(instrument:guitar, song:song10, teacher:users[1], title:'Achy Breaky Pt2', video_url:'OUNc49y33v4')
+Lesson.create!(instrument:guitar, song:song10, teacher:users[0], title:'Achy Lesson', video_url:'Lq0eM5Gths0')
+Lesson.create!(instrument:guitar, song:song10, teacher:users[1], title:'Achy Breaky Pt3', video_url:'ISiG98AaZZ8')
+Lesson.create!(instrument:guitar, song:song10, teacher:users[0], title:'Achy Lesson 2', video_url:'jE_-mimBvE0')
+
+Lesson.create!(instrument:guitar, song:song11, teacher:users[1], title:'Highway To Hell pt1', video_url:'m3tECQp61eg')
+Lesson.create!(instrument:guitar, song:song11, teacher:users[1], title:'Highway To Hell (easy)', video_url:'qKggnBh2Mdw')
+Lesson.create!(instrument:guitar, song:song11, teacher:users[0], title:'Highway To Hell (rhythm)', video_url:'Ym3tECQp61eg')
+Lesson.create!(instrument:guitar, song:song11, teacher:users[1], title:'Highway To Hell (hard)', video_url:'F6NTQymjBUU')
+Lesson.create!(instrument:guitar, song:song11, teacher:users[0], title:'Highway To Hell (solo)', video_url:'cffvsK3o9-oE')
+
+Lesson.create!(instrument:guitar, song:song12, teacher:users[1], title:'500 Miles', video_url:'y7qYNM42GFc')
+Lesson.create!(instrument:guitar, song:song12, teacher:users[1], title:'500 Miles (expert)', video_url:'5b-H-SKOqII')
+Lesson.create!(instrument:guitar, song:song12, teacher:users[0], title:'I Would Walk 500 Miles', video_url:'sqJRV8eQKxo')
+Lesson.create!(instrument:guitar, song:song12, teacher:users[1], title:' Would Walk 500 Miles', video_url:'3FiicziSMa4')
+Lesson.create!(instrument:guitar, song:song12, teacher:users[0], title:'You Would Walk 500 Miles', video_url:'wH0iuOiYJPo')
